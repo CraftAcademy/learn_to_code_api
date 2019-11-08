@@ -1,19 +1,20 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'rails', '~> 6.0.0'
+gem 'bootsnap', '>= 1.4.2', require: false
+gem 'faker'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
-gem 'faker'
-
+gem 'rails', '~> 6.0.0'
 
 group :development, :test do
-  gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end

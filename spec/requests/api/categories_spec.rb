@@ -20,7 +20,6 @@ RSpec.describe 'Api::Categories', type: :request do
     end
 
     it 'returns a collection of categories' do
-      binding.pry
       expect(response_json['categories'].count).to eq 3
     end
   end
